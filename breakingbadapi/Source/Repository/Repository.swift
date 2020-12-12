@@ -6,7 +6,7 @@
 //
 
 class Repository: InjectableComponent {
-    @Inject var remote: RemoteDatasource
+    @Inject private var remote: RemoteDatasource
 
     func fetchCharacters(completion:  @escaping ([Character]) -> Void) {
         self.remote.get(to: "characters", with: "") { (result: Result<[Character], BaseError>) in

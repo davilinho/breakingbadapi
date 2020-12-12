@@ -34,13 +34,13 @@ struct Character: Codable, Equatable {
         case betterCallSaulAppearance = "better_call_saul_appearance"
     }
 
-    func getCategories() -> [Category]? {
+    func getCategories() -> [CharacterCategory]? {
         guard let category = self.category else { return nil }
-        return category.split(separator: ",").compactMap { Category(rawValue: String($0)) }
+        return category.split(separator: ",").compactMap { CharacterCategory(rawValue: String($0.trimmingCharacters(in: .whitespacesAndNewlines))) }
     }
 }
 
-enum Category: String {
+enum CharacterCategory: String {
     case breakingBad
     case betterCallSaul
 }

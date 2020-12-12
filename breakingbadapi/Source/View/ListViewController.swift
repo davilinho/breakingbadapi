@@ -31,7 +31,7 @@ class ListViewController: UIViewController {
     }
 
     private func bindData() {
-        self.viewModel.fillData()
+        self.viewModel.onViewDidLoad()
     }
 }
 
@@ -51,4 +51,3 @@ extension ListViewController: UITableViewDataSource {
 extension ListViewController: UITabBarDelegate {
 
 }
-

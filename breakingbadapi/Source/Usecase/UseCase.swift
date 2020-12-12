@@ -8,7 +8,7 @@
 import Foundation
 
 class UseCase: InjectableComponent {
-    @Inject var repository: Repository
+    @Inject private var repository: Repository
 
     func fetchCharacters(completion: @escaping ([Character]) -> Void) {
         DispatchQueue.global(qos: .background).async {

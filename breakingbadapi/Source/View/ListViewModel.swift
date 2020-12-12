@@ -7,12 +7,12 @@
 
 import Foundation
 
-class ListViewModel: InjectableComponent {
-    @Inject var useCase: UseCase
+class ListViewModel: InjectableComponent & BaseViewModel {
+    @Inject private var useCase: UseCase
 
     var characters = Observable<[Character]>()
 
-    func fillData() {
+    func onViewDidLoad() {
         self.useCase.fetchCharacters { [weak self] in
             self?.characters.value = $0
         }

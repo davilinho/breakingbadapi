@@ -23,8 +23,4 @@ class Observable<T> {
             self.listener?(self.value)
         }
     }
-
-//    init(_ value: T) {
-//        self.value = value
-//    }
 }
