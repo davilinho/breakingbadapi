@@ -32,6 +32,7 @@
 		D57A46F72585462A003B4CA3 /* UseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57A46F62585462A003B4CA3 /* UseCaseTests.swift */; };
 		D57A470025854688003B4CA3 /* CharacterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57A46FF25854688003B4CA3 /* CharacterTests.swift */; };
 		D57A47082585485B003B4CA3 /* Collection+Safe.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57A47072585485B003B4CA3 /* Collection+Safe.swift */; };
+		D57A472A258551BE003B4CA3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D57A4729258551BE003B4CA3 /* GoogleService-Info.plist */; };
 		D5B9F3B625795EE4007DBE2E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B9F3B525795EE4007DBE2E /* AppDelegate.swift */; };
 		D5B9F3B825795EE4007DBE2E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B9F3B725795EE4007DBE2E /* SceneDelegate.swift */; };
 		D5B9F3BA25795EE4007DBE2E /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B9F3B925795EE4007DBE2E /* ListViewController.swift */; };
@@ -89,6 +90,7 @@
 		D57A46F62585462A003B4CA3 /* UseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCaseTests.swift; sourceTree = "<group>"; };
 		D57A46FF25854688003B4CA3 /* CharacterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterTests.swift; sourceTree = "<group>"; };
 		D57A47072585485B003B4CA3 /* Collection+Safe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+Safe.swift"; sourceTree = "<group>"; };
+		D57A4729258551BE003B4CA3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D5B9F3B225795EE4007DBE2E /* breakingbadapi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = breakingbadapi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5B9F3B525795EE4007DBE2E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D5B9F3B725795EE4007DBE2E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -350,6 +352,7 @@
 			isa = PBXGroup;
 			children = (
 				D5B9F3C325795EE6007DBE2E /* Info.plist */,
+				D57A4729258551BE003B4CA3 /* GoogleService-Info.plist */,
 				D5B9F3BE25795EE6007DBE2E /* Assets.xcassets */,
 				D52C50AD257CDA1F00746E44 /* Scenes */,
 				D52C50AE257CDA2D00746E44 /* Source */,
@@ -383,10 +386,12 @@
 			buildConfigurationList = D5B9F3DC25795EE7007DBE2E /* Build configuration list for PBXNativeTarget "breakingbadapi" */;
 			buildPhases = (
 				A73FB7670B4DADEFCFF7CFE1 /* [CP] Check Pods Manifest.lock */,
+				83B48361E4154AB92C2845FB /* [CP] Prepare Artifacts */,
 				D5B9F3AE25795EE4007DBE2E /* Sources */,
 				D5B9F3AF25795EE4007DBE2E /* Frameworks */,
 				D5B9F3B025795EE4007DBE2E /* Resources */,
 				06AAA9AD7F61DBCAA8456156 /* [CP] Embed Pods Frameworks */,
+				D57A4755258552A4003B4CA3 /* Firebase Crashlytics */,
 			);
 			buildRules = (
 			);
@@ -422,6 +427,7 @@
 			buildConfigurationList = D5B9F3E225795EE7007DBE2E /* Build configuration list for PBXNativeTarget "breakingbadapiUITests" */;
 			buildPhases = (
 				70F303AF199D481702908069 /* [CP] Check Pods Manifest.lock */,
+				15827AFFB0079684D5D9D43C /* [CP] Prepare Artifacts */,
 				D5B9F3CF25795EE7007DBE2E /* Sources */,
 				D5B9F3D025795EE7007DBE2E /* Frameworks */,
 				D5B9F3D125795EE7007DBE2E /* Resources */,
@@ -485,6 +491,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D5B9F3C225795EE6007DBE2E /* LaunchScreen.storyboard in Resources */,
+				D57A472A258551BE003B4CA3 /* GoogleService-Info.plist in Resources */,
 				D5B9F3BF25795EE6007DBE2E /* Assets.xcassets in Resources */,
 				D5B9F3BD25795EE4007DBE2E /* List.storyboard in Resources */,
 			);
@@ -522,6 +529,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-breakingbadapi/Pods-breakingbadapi-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		15827AFFB0079684D5D9D43C /* [CP] Prepare Artifacts */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-breakingbadapi-breakingbadapiUITests/Pods-breakingbadapi-breakingbadapiUITests-artifacts-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Prepare Artifacts";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-breakingbadapi-breakingbadapiUITests/Pods-breakingbadapi-breakingbadapiUITests-artifacts-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-breakingbadapi-breakingbadapiUITests/Pods-breakingbadapi-breakingbadapiUITests-artifacts.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		3E171FA3C2B3E5BFD7EEE50E /* [CP] Check Pods Manifest.lock */ = {
@@ -585,6 +609,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		83B48361E4154AB92C2845FB /* [CP] Prepare Artifacts */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-breakingbadapi/Pods-breakingbadapi-artifacts-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Prepare Artifacts";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-breakingbadapi/Pods-breakingbadapi-artifacts-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-breakingbadapi/Pods-breakingbadapi-artifacts.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		A73FB7670B4DADEFCFF7CFE1 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -606,6 +647,25 @@
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
+		};
+		D57A4755258552A4003B4CA3 /* Firebase Crashlytics */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/$(BUILT_PRODUCTS_DIR)/$(INFOPLIST_PATH)",
+			);
+			name = "Firebase Crashlytics";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"${PODS_ROOT}/FirebaseCrashlytics/run\"\n";
 		};
 		EDE87E6A30460AB00535F488 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
