@@ -1,0 +1,6 @@
+framework module Pods_breakingbadapiTests {
+  umbrella header "Pods-breakingbadapiTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

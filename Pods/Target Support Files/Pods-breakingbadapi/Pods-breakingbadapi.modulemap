@@ -1,0 +1,6 @@
+framework module Pods_breakingbadapi {
+  umbrella header "Pods-breakingbadapi-umbrella.h"
+
+  export *
+  module * { export * }
+}
