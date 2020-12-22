@@ -1,0 +1,9 @@
+coverage_service: coveralls
+xcodeproj: breakingbadapi.xcodeproj
+workspace: breakingbadapi.xcworkspace
+scheme: breakingbadapi
+source_directory: breakingbadapi/*
+ignore:
+  - breakingbadapiTests/*
+  - breakingbadapiUITests/*
+  - Pods/*
