@@ -1,4 +1,4 @@
-# breakingbadapi
+# Breaking Bad API
 
 [![OS Version: iOS 13.0](https://img.shields.io/badge/iOS-13.0-green.svg)](https://www.apple.com/es/ios/ios-13/)
 
