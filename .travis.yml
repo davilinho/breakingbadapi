@@ -17,12 +17,15 @@ jobs:
     name: "Running UI tests"
     script: bundle exec fastlane ui_test device:'iPhone 12' ios_version:'14.2'
 
-
+  - stage: coverage
+    name: "Running full set of tests and gathering coverage data"
+    script: bundle exec fastlane full_test device:'iPhone 12' ios_version:'14.2'
+    after_success: bundle exec slather
 
 stages:
 - name: build
   if: (type = pull_request) AND (branch = master OR branch = develop)
 - name: test
   if: (type = pull_request) AND (branch = master OR branch = develop)
-- name: build
+- name: coverage
   if: (type = push) AND (branch = master OR branch = develop)
