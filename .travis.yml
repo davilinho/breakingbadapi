@@ -11,15 +11,15 @@ jobs:
 
   - stage: test
     name: "Running unit tests"
-    script: bundle exec fastlane unit_test device:'iphonesimulator14.2' ios_version:'14.0'
+    script: bundle exec fastlane unit_test device:'iPhone 12 mini' ios_version:'14.0'
 
   - stage: test
     name: "Running UI tests"
-    script: bundle exec fastlane ui_test device:'iphonesimulator14.2' ios_version:'14.0'
+    script: bundle exec fastlane ui_test device:'iPhone 12 mini' ios_version:'14.0'
 
   - stage: coverage
     name: "Running full set of tests and gathering coverage data"
-    script: bundle exec fastlane full_test device:'iphonesimulator14.2' ios_version:'14.0'
+    script: bundle exec fastlane full_test device:'iPhone 12 mini' ios_version:'14.0'
     after_success: bundle exec slather
 
 stages:
