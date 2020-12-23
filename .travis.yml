@@ -27,5 +27,5 @@ stages:
   if: (type = pull_request) AND (branch = master OR branch = develop)
 - name: test
   if: (type = pull_request) AND (branch = master OR branch = develop)
-- name: coverage
+- name: build
   if: (type = push) AND (branch = master OR branch = develop)
