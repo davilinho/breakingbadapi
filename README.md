@@ -4,6 +4,37 @@
 [![Build Status](https://travis-ci.com/davilinho/breakingbadapi.svg?branch=master)](https://travis-ci.com/davilinho/breakingbadapi)
 [![Coverage Status](https://coveralls.io/repos/github/davilinho/breakingbadapi/badge.svg?branch=master)](https://coveralls.io/github/davilinho/breakingbadapi?branch=master)
 
+In this manuscript we explain and discuss the changes that have been implemented, along with some additional tools that have been added to the project or the repository.
+
+## Table of contents
+
+- [Breaking Bad API](#breakingbadaPI)
+  * [Table of contents](#table-of-contents)
+  * [Code refactor](#code-refactor)
+    + [Code styling](#code-styling)
+    + [Architecture and design pattern](#architecture-and-design-pattern)
+      - [Service and repository layers](#service-and-repository-layers)
+      - [Model-View-ViewModel architecture](#model-view-viewmodel-architecture)
+      - [A comment on reactive programming](#a-comment-on-reactive-programming)
+    + [Storyboards and XIB files](#storyboards-and-xib-files)
+    + [Dependency injection](#dependency-injection)
+  * [Feature implementation](#feature-implementation)
+    + [iOS 13 and dark mode](#ios-13-and-dark-mode)
+  * [Tests](#tests)
+    + [Unit tests](#unit-tests)
+    + [Snapshot tests](#snapshot-tests)
+    + [UI tests](#ui-tests)
+      - [MockServer](#mockserver)
+  * [Third-party frameworks](#third-party-frameworks)
+    + [AlamofireImage](#alamofireimage)
+    + [DataSourceController](#datasourcecontroller)
+    + [SnapshotTesting](#snapshottesting)
+    + [Swifter](#swifter)
+  * [Tools](#tools)
+    + [Continuous Integration server](#continuous-integration-server)
+    + [Code coverage reports](#code-coverage-reports)
+  * [Branching strategy](#branching-strategy)
+
 ### Continuous Integration server
 
 Since this repository is *public* (since it's forked from a *public* repository), we created a Travis CI instance attached to it to run tests and perform additional tasks automatically when several conditions met. In combination with our [Branching strategy](#branching-strategy) and some protection rules on `master` and `develop`, we ensure that no code was ever merged to these branches without passing the proper tests.
