@@ -19,7 +19,7 @@ jobs:
 
   - stage: coverage
     name: "Running full set of tests and gathering coverage data"
-    script: bundle exec fastlane compile_app ios_version:'14.2'
+    script: bundle exec fastlane full_test device:'iPhone 12' ios_version:'14.2'
     after_success: bundle exec slather
 
 stages:
