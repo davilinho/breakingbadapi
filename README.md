@@ -18,8 +18,6 @@ In this manuscript we explain and discuss the changes that have been implemented
       - [A comment on reactive programming](#a-comment-on-reactive-programming)
     + [Storyboards and XIB files](#storyboards-and-xib-files)
     + [Dependency injection](#dependency-injection)
-  * [Feature implementation](#feature-implementation)
-    + [iOS 13 and dark mode](#ios-13-and-dark-mode)
   * [Tests](#tests)
     + [Unit tests](#unit-tests)
     + [Snapshot tests](#snapshot-tests)
@@ -27,13 +25,71 @@ In this manuscript we explain and discuss the changes that have been implemented
       - [MockServer](#mockserver)
   * [Third-party frameworks](#third-party-frameworks)
     + [AlamofireImage](#alamofireimage)
-    + [DataSourceController](#datasourcecontroller)
     + [SnapshotTesting](#snapshottesting)
-    + [Swifter](#swifter)
   * [Tools](#tools)
     + [Continuous Integration server](#continuous-integration-server)
     + [Code coverage reports](#code-coverage-reports)
   * [Branching strategy](#branching-strategy)
+  
+## Tests
+
+Although both the unit tests and the UI tests target were already included in the original code base, there were no tests implemented besides the default empty tests that are created when the test bundles are added to a Xcode project. We extensively expanded both testing targets to raise code coverage to nearly 100% and cover several user journeys when using this section of the app.
+
+### Unit tests
+
+Unit tests are tests of isolated components or business logic using mock objects. Therefore, as a general basis, at the very least every view model should include unit tests when using the MVVM architecture. Furthermore, when using repositories in Android Clean Architecture, all of the repositories should include unit tests too. Therefore we have implemented unit tests for the following components:
+* Mappers from server model object `SearchResponse` to domain model objects `Artist` and `Track`
+* Repository `SearchRepository`
+* View models `HomeViewModel`, `SearchResultCollectionViewModel`, `SearchResultTableViewModel`, `TrackDetailsViewModel` and `TrackPlayerViewModel`.
+
+As usual, all of these tests use mock objects to pass data or receive delegate calls and perform validations.
+
+### Snapshot tests
+
+By means of the framework **SnapshotTesting** (see [the corresponding section](#snapshottesting) below) we included snapshot tests of almost every view in the app, from the simplest cell to a whole view controller. In particular, we implemented snapshot tests for the following classes:
+* `HomeViewController`
+* `TrackDetailsViewController`
+* `SearchResultCollectionCell`
+* `SearchResultTableCell`
+* `EdgeInsetLabel`
+
+The only view without snapshot tests is the `TrackPlayerViewController` since it is a straighforward subclass of `AVPlayerViewController` and we considered unnecessary: it's usage is already covered by UITests.
+
+Snapshots can be found in the subfolders of `ABA MusicTests/Source/Views tests/__Snapshots__/`.
+
+## Third-party frameworks
+
+Since the frameworks were not included in the original repository, one of the first things we had to do is perform a `pod install --repo-update` in the root folder to install dependencies. After that, we reviewed all the dependencies included in the `Podfile` and their usage in the code. As a consequence, we remove all of the dependencies except for `AlamofireImage`, which was the only one under use.
+
+During the implementation of the search feature and the tests we decided to use some additional dependencies, which we discuss in the following.
+
+**Note:** The `Pods/` folder in now checked into the repository, so that we can just download and press `Run` to execute the app in the simulator.
+
+### AlamofireImage
+
+`AlamofireImage` is a library that enables to easily manage downloading and setting images from the internet. It has a simple and clear API, and includes a built-in cache system to avoid downloading the same image again and again.
+
+**Source:** [https://github.com/Alamofire/AlamofireImage](https://github.com/Alamofire/AlamofireImage)
+
+### PromiseKit
+
+`PromiseKit` simplify asynchronous programming, freeing you up to focus on the more important things. They are easy to learn, easy to master and result in clearer, more readable code.
+
+PromiseKit is a thoughtful and complete implementation of promises for any platform that has a swiftc. It has excellent Objective-C bridging and delightful specializations for iOS, macOS, tvOS and watchOS. It is a top-100 pod used in many of the most popular apps in the world.
+
+**Source:** [https://github.com/mxcl/PromiseKit](https://github.com/mxcl/PromiseKit)
+
+### SnapshotTesting
+
+`SnapshotTesting` is a library similar to [iOSSnapshotTestCase](https://github.com/uber/ios-snapshot-test-case) (formerly maintained by Facebook, now maintained by Uber) developed by the awesome team of Point-Free. Contratry to `iOSSnapshotTestCase`, `SnapshotTesting` is written purely in Swift and is compatible with [Nimble](https://github.com/Quick/Nimble) using a plugin.
+
+This library enables us to snapshot test views, server responses and more in several formats, from images to plain text files, which makes it outstandingly versatile.
+
+**Source:** [https://github.com/pointfreeco/swift-snapshot-testing](https://github.com/pointfreeco/swift-snapshot-testing)
+
+## Tools
+
+In addition to the feature implementation, the code refactor and the tests implementation, we added several tools to the repository which helped us during this assignment.
 
 ### Continuous Integration server
 
