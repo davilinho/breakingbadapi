@@ -13,6 +13,7 @@ target 'breakingbadapi' do
     inherit! :search_paths
 
     pod 'Nimble', '9.0.0'
+    pod 'SnapshotTesting', '~> 1.8.1'
   end
 
   target 'breakingbadapiUITests' do

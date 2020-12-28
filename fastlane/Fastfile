@@ -61,7 +61,7 @@ lane :full_test do |options|
 	scan(
 	    scheme: "breakingbadapi",
 	    device: options[:device],
-	    sdk: "iphonesimulator",
+	    sdk: "iphonesimulator" + "#{ios_version}",
 	    clean: true,
 	    disable_concurrent_testing: true
   	)

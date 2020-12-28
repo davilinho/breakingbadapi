@@ -386,6 +386,7 @@
 			buildConfigurationList = D5B9F3DC25795EE7007DBE2E /* Build configuration list for PBXNativeTarget "breakingbadapi" */;
 			buildPhases = (
 				A73FB7670B4DADEFCFF7CFE1 /* [CP] Check Pods Manifest.lock */,
+				22EC53E8FBA70DA3214EA1E4 /* [CP] Prepare Artifacts */,
 				D5B9F3AE25795EE4007DBE2E /* Sources */,
 				D5B9F3AF25795EE4007DBE2E /* Frameworks */,
 				D5B9F3B025795EE4007DBE2E /* Resources */,
@@ -527,6 +528,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-breakingbadapi/Pods-breakingbadapi-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		22EC53E8FBA70DA3214EA1E4 /* [CP] Prepare Artifacts */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-breakingbadapi/Pods-breakingbadapi-artifacts-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Prepare Artifacts";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-breakingbadapi/Pods-breakingbadapi-artifacts-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-breakingbadapi/Pods-breakingbadapi-artifacts.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		3E171FA3C2B3E5BFD7EEE50E /* [CP] Check Pods Manifest.lock */ = {
