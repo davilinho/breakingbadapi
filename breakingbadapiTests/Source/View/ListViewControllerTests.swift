@@ -21,6 +21,7 @@ class ListViewControllerTests: XCTestCase {
 
     func testViewControllerAssertSnapshotSuccessful() {
         guard let sut = self.loadView() else { return }
+        sut.viewDidLoad()
         assertSnapshot(matching: sut, as: .image)
     }
 }
