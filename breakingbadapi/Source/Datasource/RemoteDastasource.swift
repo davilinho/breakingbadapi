@@ -32,18 +32,15 @@ extension RemoteDatasource {
                      headers: ["Accept": "application/json",
                                "Content-Type": "application/json"])
             .validate(contentType: ["application/json"])
+            .validate(statusCode: 200 ..< 300)
             .responseDecodable(of: Response.self) { response in
-                guard let data = response.data, let stringResponse: String = String(data: data, encoding: .utf8) else {
+                guard let data = response.data, let stringResponse: String = String(data: data, encoding: .utf8),
+                      let statusCode = response.response?.statusCode else {
                     completion(.failure(.remoteError(.reason(response.error?.errorDescription ?? "Networking error connection"))))
                     return
                 }
-                guard let statusCode = response.response?.statusCode else {
-                    completion(.failure(.remoteError(.reason("Wrong response received: \(response.error?.errorDescription ?? "Wrong status response code received")"))))
-                    return
-                }
-                guard statusCode >= 200, statusCode < 300 else {
-                    completion(.failure(.remoteError(.reason("Wrong response received: \(statusCode)"))))
-                    return
+                if statusCode < 200 || statusCode > 300 {
+                    CoreLog.remote.error("Wrong response received: %@", statusCode)
                 }
 
                 CoreLog.remote.debug("Response: %@", stringResponse)
