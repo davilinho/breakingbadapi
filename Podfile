@@ -10,6 +10,7 @@ target 'breakingbadapi' do
   pod 'Firebase/Crashlytics'
   pod 'Firebase/Performance'
   pod "PromiseKit", "6.12.0"
+  pod 'SDWebImage'
 
   target 'breakingbadapiTests' do
     inherit! :search_paths

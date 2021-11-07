@@ -13,7 +13,7 @@ struct Character: Codable, Equatable {
     let birthday: String?
     let occupation: [String]?
     let img: String?
-    let status: String?
+    let status: Status?
     let nickName: String?
     let appearance: [Int]?
     let portrayed: String?
@@ -37,6 +37,13 @@ struct Character: Codable, Equatable {
     func getCategories() -> [CharacterCategory]? {
         guard let category = self.category else { return nil }
         return category.split(separator: ",").compactMap { CharacterCategory(rawValue: String($0.trimmingCharacters(in: .whitespacesAndNewlines))) }
+    }
+
+    enum Status: String, Codable {
+        case alive = "Alive"
+        case deceased = "Deceased"
+        case presumedDead = "Presumed dead"
+        case unknown = "Unknown"
     }
 }
 
