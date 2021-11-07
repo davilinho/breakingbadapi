@@ -6,21 +6,29 @@
 //
 
 class Observable<T> {
-    typealias Listener = (T?) -> Void
-    var listener: Listener?
+    typealias Observer = (T?) -> Void
 
-    func bind(_ listener: Listener?) {
-        self.listener = listener
-    }
-
-    func bindAndFire(_ listener: Listener?) {
-        self.listener = listener
-        listener?(self.value)
-    }
+    private var observer: Observer?
 
     var value: T? {
         didSet {
-            self.listener?(self.value)
+            self.observer?(self.value)
         }
+    }
+
+    init() {
+        self.value = nil
+    }
+
+    init(_ value: T) {
+        self.value = value
+    }
+
+    func subscribe(_ observer: Observer?) {
+        self.observer = observer
+    }
+
+    func unsubscribe() {
+        self.observer = nil
     }
 }

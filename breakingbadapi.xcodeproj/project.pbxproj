@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5135EBBFCDCF8A47EECC6CEF /* Pods_breakingbadapi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E13D5686435DD0081069C2A /* Pods_breakingbadapi.framework */; };
-		6A674CA8C54891159A2221C7 /* Pods_breakingbadapiTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C0F89ED8D42F214102BFFE0 /* Pods_breakingbadapiTests.framework */; };
-		9E698FE731B6813A603CCC64 /* Pods_breakingbadapi_breakingbadapiUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2AA794115AAA4D143B6CE7F /* Pods_breakingbadapi_breakingbadapiUITests.framework */; };
+		05EF41CFA7031FB25BEE06E6 /* Pods_breakingbadapi_breakingbadapiUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 410EEAD200F3182F2E42F66F /* Pods_breakingbadapi_breakingbadapiUITests.framework */; };
+		173D5F0AAEAC913E536D39EA /* Pods_breakingbadapiTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEA1F3BC053945B83A38E0FD /* Pods_breakingbadapiTests.framework */; };
+		D5008B152738249900517F69 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5008B142738249900517F69 /* BaseViewController.swift */; };
 		D52C50B8257CDCD100746E44 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D52C50B7257CDCD100746E44 /* Observable.swift */; };
 		D52C50C1257CDD7100746E44 /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D52C50C0257CDD7100746E44 /* ListViewModel.swift */; };
 		D52C50C7257EF26100746E44 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = D52C50C6257EF26100746E44 /* Character.swift */; };
@@ -40,6 +40,7 @@
 		D5B9F3BF25795EE6007DBE2E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D5B9F3BE25795EE6007DBE2E /* Assets.xcassets */; };
 		D5B9F3C225795EE6007DBE2E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5B9F3C025795EE6007DBE2E /* LaunchScreen.storyboard */; };
 		D5B9F3D825795EE7007DBE2E /* breakingbadapiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B9F3D725795EE7007DBE2E /* breakingbadapiUITests.swift */; };
+		E6B159172989EBEDF2ABB7E0 /* Pods_breakingbadapi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D31BBACA1FC565E5370C83A /* Pods_breakingbadapi.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,14 +61,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		4C39C1557BB1F7474865C05F /* Pods-breakingbadapi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-breakingbadapi.release.xcconfig"; path = "Target Support Files/Pods-breakingbadapi/Pods-breakingbadapi.release.xcconfig"; sourceTree = "<group>"; };
-		4DB3E2CDA6C8CF5A9FA39944 /* Pods-breakingbadapi-breakingbadapiUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-breakingbadapi-breakingbadapiUITests.debug.xcconfig"; path = "Target Support Files/Pods-breakingbadapi-breakingbadapiUITests/Pods-breakingbadapi-breakingbadapiUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		8C0F89ED8D42F214102BFFE0 /* Pods_breakingbadapiTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_breakingbadapiTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		8E13D5686435DD0081069C2A /* Pods_breakingbadapi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_breakingbadapi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		937333F89C64045517509226 /* Pods-breakingbadapiTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-breakingbadapiTests.release.xcconfig"; path = "Target Support Files/Pods-breakingbadapiTests/Pods-breakingbadapiTests.release.xcconfig"; sourceTree = "<group>"; };
-		9428A5DCABFE90A3B5808DE7 /* Pods-breakingbadapi-breakingbadapiUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-breakingbadapi-breakingbadapiUITests.release.xcconfig"; path = "Target Support Files/Pods-breakingbadapi-breakingbadapiUITests/Pods-breakingbadapi-breakingbadapiUITests.release.xcconfig"; sourceTree = "<group>"; };
-		A5E5B24987125EF27D3CE571 /* Pods-breakingbadapiTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-breakingbadapiTests.debug.xcconfig"; path = "Target Support Files/Pods-breakingbadapiTests/Pods-breakingbadapiTests.debug.xcconfig"; sourceTree = "<group>"; };
-		B2AA794115AAA4D143B6CE7F /* Pods_breakingbadapi_breakingbadapiUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_breakingbadapi_breakingbadapiUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		09F6B9C714088193982D857A /* Pods-breakingbadapi-breakingbadapiUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-breakingbadapi-breakingbadapiUITests.release.xcconfig"; path = "Target Support Files/Pods-breakingbadapi-breakingbadapiUITests/Pods-breakingbadapi-breakingbadapiUITests.release.xcconfig"; sourceTree = "<group>"; };
+		238A2562A7438F13483FB0F4 /* Pods-breakingbadapi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-breakingbadapi.debug.xcconfig"; path = "Target Support Files/Pods-breakingbadapi/Pods-breakingbadapi.debug.xcconfig"; sourceTree = "<group>"; };
+		410EEAD200F3182F2E42F66F /* Pods_breakingbadapi_breakingbadapiUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_breakingbadapi_breakingbadapiUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6D31BBACA1FC565E5370C83A /* Pods_breakingbadapi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_breakingbadapi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C70F52D3E9E05D3BA24AFA7 /* Pods-breakingbadapi-breakingbadapiUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-breakingbadapi-breakingbadapiUITests.debug.xcconfig"; path = "Target Support Files/Pods-breakingbadapi-breakingbadapiUITests/Pods-breakingbadapi-breakingbadapiUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		A320944CDFF670C4C480258C /* Pods-breakingbadapi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-breakingbadapi.release.xcconfig"; path = "Target Support Files/Pods-breakingbadapi/Pods-breakingbadapi.release.xcconfig"; sourceTree = "<group>"; };
+		D4042F5263F96C217A36E436 /* Pods-breakingbadapiTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-breakingbadapiTests.debug.xcconfig"; path = "Target Support Files/Pods-breakingbadapiTests/Pods-breakingbadapiTests.debug.xcconfig"; sourceTree = "<group>"; };
+		D5008B142738249900517F69 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		D52C50B7257CDCD100746E44 /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 		D52C50C0257CDD7100746E44 /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
 		D52C50C6257EF26100746E44 /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
@@ -104,7 +105,8 @@
 		D5B9F3D325795EE7007DBE2E /* breakingbadapiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = breakingbadapiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5B9F3D725795EE7007DBE2E /* breakingbadapiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = breakingbadapiUITests.swift; sourceTree = "<group>"; };
 		D5B9F3D925795EE7007DBE2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FF5615C5BD546A028CF26867 /* Pods-breakingbadapi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-breakingbadapi.debug.xcconfig"; path = "Target Support Files/Pods-breakingbadapi/Pods-breakingbadapi.debug.xcconfig"; sourceTree = "<group>"; };
+		E25CBB9E2E5158DD465B18F6 /* Pods-breakingbadapiTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-breakingbadapiTests.release.xcconfig"; path = "Target Support Files/Pods-breakingbadapiTests/Pods-breakingbadapiTests.release.xcconfig"; sourceTree = "<group>"; };
+		FEA1F3BC053945B83A38E0FD /* Pods_breakingbadapiTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_breakingbadapiTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,7 +114,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5135EBBFCDCF8A47EECC6CEF /* Pods_breakingbadapi.framework in Frameworks */,
+				E6B159172989EBEDF2ABB7E0 /* Pods_breakingbadapi.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -120,7 +122,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6A674CA8C54891159A2221C7 /* Pods_breakingbadapiTests.framework in Frameworks */,
+				173D5F0AAEAC913E536D39EA /* Pods_breakingbadapiTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -128,34 +130,34 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9E698FE731B6813A603CCC64 /* Pods_breakingbadapi_breakingbadapiUITests.framework in Frameworks */,
+				05EF41CFA7031FB25BEE06E6 /* Pods_breakingbadapi_breakingbadapiUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1E705FFB12D62FF5C6EA5095 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6D31BBACA1FC565E5370C83A /* Pods_breakingbadapi.framework */,
+				410EEAD200F3182F2E42F66F /* Pods_breakingbadapi_breakingbadapiUITests.framework */,
+				FEA1F3BC053945B83A38E0FD /* Pods_breakingbadapiTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		8994E86C9947896A8D2EDD1F /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				FF5615C5BD546A028CF26867 /* Pods-breakingbadapi.debug.xcconfig */,
-				4C39C1557BB1F7474865C05F /* Pods-breakingbadapi.release.xcconfig */,
-				4DB3E2CDA6C8CF5A9FA39944 /* Pods-breakingbadapi-breakingbadapiUITests.debug.xcconfig */,
-				9428A5DCABFE90A3B5808DE7 /* Pods-breakingbadapi-breakingbadapiUITests.release.xcconfig */,
-				A5E5B24987125EF27D3CE571 /* Pods-breakingbadapiTests.debug.xcconfig */,
-				937333F89C64045517509226 /* Pods-breakingbadapiTests.release.xcconfig */,
+				238A2562A7438F13483FB0F4 /* Pods-breakingbadapi.debug.xcconfig */,
+				A320944CDFF670C4C480258C /* Pods-breakingbadapi.release.xcconfig */,
+				9C70F52D3E9E05D3BA24AFA7 /* Pods-breakingbadapi-breakingbadapiUITests.debug.xcconfig */,
+				09F6B9C714088193982D857A /* Pods-breakingbadapi-breakingbadapiUITests.release.xcconfig */,
+				D4042F5263F96C217A36E436 /* Pods-breakingbadapiTests.debug.xcconfig */,
+				E25CBB9E2E5158DD465B18F6 /* Pods-breakingbadapiTests.release.xcconfig */,
 			);
 			path = Pods;
-			sourceTree = "<group>";
-		};
-		D0045555106716CAB668D389 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				8E13D5686435DD0081069C2A /* Pods_breakingbadapi.framework */,
-				B2AA794115AAA4D143B6CE7F /* Pods_breakingbadapi_breakingbadapiUITests.framework */,
-				8C0F89ED8D42F214102BFFE0 /* Pods_breakingbadapiTests.framework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		D52C50AD257CDA1F00746E44 /* Scenes */ = {
@@ -187,6 +189,7 @@
 			isa = PBXGroup;
 			children = (
 				D52C510E257F082000746E44 /* BaseError.swift */,
+				D5008B142738249900517F69 /* BaseViewController.swift */,
 				D57A46CF258540A2003B4CA3 /* BaseViewModel.swift */,
 				D52C5113257FCA3100746E44 /* CommonResponse.swift */,
 				D52C5106257F062100746E44 /* CoreLog.swift */,
@@ -334,7 +337,7 @@
 				D5B9F3D625795EE7007DBE2E /* breakingbadapiUITests */,
 				D5B9F3B325795EE4007DBE2E /* Products */,
 				8994E86C9947896A8D2EDD1F /* Pods */,
-				D0045555106716CAB668D389 /* Frameworks */,
+				1E705FFB12D62FF5C6EA5095 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -385,13 +388,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D5B9F3DC25795EE7007DBE2E /* Build configuration list for PBXNativeTarget "breakingbadapi" */;
 			buildPhases = (
-				A73FB7670B4DADEFCFF7CFE1 /* [CP] Check Pods Manifest.lock */,
-				22EC53E8FBA70DA3214EA1E4 /* [CP] Prepare Artifacts */,
+				67180FA2ECA950D7D93A4A9B /* [CP] Check Pods Manifest.lock */,
 				D5B9F3AE25795EE4007DBE2E /* Sources */,
 				D5B9F3AF25795EE4007DBE2E /* Frameworks */,
 				D5B9F3B025795EE4007DBE2E /* Resources */,
-				06AAA9AD7F61DBCAA8456156 /* [CP] Embed Pods Frameworks */,
 				D57A4755258552A4003B4CA3 /* Firebase Crashlytics */,
+				090335B66AD3DDE352170A7C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -406,11 +408,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D5B9F3DF25795EE7007DBE2E /* Build configuration list for PBXNativeTarget "breakingbadapiTests" */;
 			buildPhases = (
-				3E171FA3C2B3E5BFD7EEE50E /* [CP] Check Pods Manifest.lock */,
+				3C4E12B9074E45ACEC7748EE /* [CP] Check Pods Manifest.lock */,
 				D5B9F3C425795EE7007DBE2E /* Sources */,
 				D5B9F3C525795EE7007DBE2E /* Frameworks */,
 				D5B9F3C625795EE7007DBE2E /* Resources */,
-				EDE87E6A30460AB00535F488 /* [CP] Embed Pods Frameworks */,
+				1A1E57F843D628A053EA0785 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -426,11 +428,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D5B9F3E225795EE7007DBE2E /* Build configuration list for PBXNativeTarget "breakingbadapiUITests" */;
 			buildPhases = (
-				70F303AF199D481702908069 /* [CP] Check Pods Manifest.lock */,
+				8F31F26689B7A2E0A190E9D4 /* [CP] Check Pods Manifest.lock */,
 				D5B9F3CF25795EE7007DBE2E /* Sources */,
 				D5B9F3D025795EE7007DBE2E /* Frameworks */,
 				D5B9F3D125795EE7007DBE2E /* Resources */,
-				69DBFD5CA99685BEB1CC67F0 /* [CP] Embed Pods Frameworks */,
+				B3B2310702F983C53A0A0B99 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -513,7 +515,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		06AAA9AD7F61DBCAA8456156 /* [CP] Embed Pods Frameworks */ = {
+		090335B66AD3DDE352170A7C /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -530,24 +532,24 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-breakingbadapi/Pods-breakingbadapi-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		22EC53E8FBA70DA3214EA1E4 /* [CP] Prepare Artifacts */ = {
+		1A1E57F843D628A053EA0785 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-breakingbadapi/Pods-breakingbadapi-artifacts-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-breakingbadapiTests/Pods-breakingbadapiTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			name = "[CP] Prepare Artifacts";
+			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-breakingbadapi/Pods-breakingbadapi-artifacts-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-breakingbadapiTests/Pods-breakingbadapiTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-breakingbadapi/Pods-breakingbadapi-artifacts.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-breakingbadapiTests/Pods-breakingbadapiTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		3E171FA3C2B3E5BFD7EEE50E /* [CP] Check Pods Manifest.lock */ = {
+		3C4E12B9074E45ACEC7748EE /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -569,46 +571,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		69DBFD5CA99685BEB1CC67F0 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-breakingbadapi-breakingbadapiUITests/Pods-breakingbadapi-breakingbadapiUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-breakingbadapi-breakingbadapiUITests/Pods-breakingbadapi-breakingbadapiUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-breakingbadapi-breakingbadapiUITests/Pods-breakingbadapi-breakingbadapiUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		70F303AF199D481702908069 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-breakingbadapi-breakingbadapiUITests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		A73FB7670B4DADEFCFF7CFE1 /* [CP] Check Pods Manifest.lock */ = {
+		67180FA2ECA950D7D93A4A9B /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -630,6 +593,45 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		8F31F26689B7A2E0A190E9D4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-breakingbadapi-breakingbadapiUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B3B2310702F983C53A0A0B99 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-breakingbadapi-breakingbadapiUITests/Pods-breakingbadapi-breakingbadapiUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-breakingbadapi-breakingbadapiUITests/Pods-breakingbadapi-breakingbadapiUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-breakingbadapi-breakingbadapiUITests/Pods-breakingbadapi-breakingbadapiUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		D57A4755258552A4003B4CA3 /* Firebase Crashlytics */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -649,23 +651,6 @@
 			shellPath = /bin/sh;
 			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"${PODS_ROOT}/FirebaseCrashlytics/run\"\n";
 		};
-		EDE87E6A30460AB00535F488 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-breakingbadapiTests/Pods-breakingbadapiTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-breakingbadapiTests/Pods-breakingbadapiTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-breakingbadapiTests/Pods-breakingbadapiTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -678,6 +663,7 @@
 				D52C50C1257CDD7100746E44 /* ListViewModel.swift in Sources */,
 				D52C50B8257CDCD100746E44 /* Observable.swift in Sources */,
 				D5B9F3BA25795EE4007DBE2E /* ListViewController.swift in Sources */,
+				D5008B152738249900517F69 /* BaseViewController.swift in Sources */,
 				D57A46D0258540A2003B4CA3 /* BaseViewModel.swift in Sources */,
 				D52C5107257F062100746E44 /* CoreLog.swift in Sources */,
 				D56780372585196600C52491 /* Components.swift in Sources */,
@@ -869,13 +855,13 @@
 		};
 		D5B9F3DD25795EE7007DBE2E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FF5615C5BD546A028CF26867 /* Pods-breakingbadapi.debug.xcconfig */;
+			baseConfigurationReference = 238A2562A7438F13483FB0F4 /* Pods-breakingbadapi.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEVELOPMENT_TEAM = TJ2TNER4KE;
+				DEVELOPMENT_TEAM = YW66TP47QZ;
 				INFOPLIST_FILE = breakingbadapi/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -890,13 +876,13 @@
 		};
 		D5B9F3DE25795EE7007DBE2E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4C39C1557BB1F7474865C05F /* Pods-breakingbadapi.release.xcconfig */;
+			baseConfigurationReference = A320944CDFF670C4C480258C /* Pods-breakingbadapi.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEVELOPMENT_TEAM = TJ2TNER4KE;
+				DEVELOPMENT_TEAM = YW66TP47QZ;
 				INFOPLIST_FILE = breakingbadapi/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -911,15 +897,15 @@
 		};
 		D5B9F3E025795EE7007DBE2E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A5E5B24987125EF27D3CE571 /* Pods-breakingbadapiTests.debug.xcconfig */;
+			baseConfigurationReference = D4042F5263F96C217A36E436 /* Pods-breakingbadapiTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEVELOPMENT_TEAM = TJ2TNER4KE;
+				DEVELOPMENT_TEAM = YW66TP47QZ;
 				INFOPLIST_FILE = breakingbadapiTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -935,15 +921,15 @@
 		};
 		D5B9F3E125795EE7007DBE2E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 937333F89C64045517509226 /* Pods-breakingbadapiTests.release.xcconfig */;
+			baseConfigurationReference = E25CBB9E2E5158DD465B18F6 /* Pods-breakingbadapiTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEVELOPMENT_TEAM = TJ2TNER4KE;
+				DEVELOPMENT_TEAM = YW66TP47QZ;
 				INFOPLIST_FILE = breakingbadapiTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -959,11 +945,11 @@
 		};
 		D5B9F3E325795EE7007DBE2E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4DB3E2CDA6C8CF5A9FA39944 /* Pods-breakingbadapi-breakingbadapiUITests.debug.xcconfig */;
+			baseConfigurationReference = 9C70F52D3E9E05D3BA24AFA7 /* Pods-breakingbadapi-breakingbadapiUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = TJ2TNER4KE;
+				DEVELOPMENT_TEAM = YW66TP47QZ;
 				INFOPLIST_FILE = breakingbadapiUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -980,11 +966,11 @@
 		};
 		D5B9F3E425795EE7007DBE2E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9428A5DCABFE90A3B5808DE7 /* Pods-breakingbadapi-breakingbadapiUITests.release.xcconfig */;
+			baseConfigurationReference = 09F6B9C714088193982D857A /* Pods-breakingbadapi-breakingbadapiUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = TJ2TNER4KE;
+				DEVELOPMENT_TEAM = YW66TP47QZ;
 				INFOPLIST_FILE = breakingbadapiUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
