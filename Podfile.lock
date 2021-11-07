@@ -129,6 +129,9 @@ PODS:
   - PromiseKit/UIKit (6.12.0):
     - PromiseKit/CorePromise
   - PromisesObjC (2.0.0)
+  - SDWebImage (5.12.1):
+    - SDWebImage/Core (= 5.12.1)
+  - SDWebImage/Core (5.12.1)
   - SnapshotTesting (1.8.2)
 
 DEPENDENCIES:
@@ -138,6 +141,7 @@ DEPENDENCIES:
   - Firebase/Performance
   - Nimble (= 9.2.1)
   - PromiseKit (= 6.12.0)
+  - SDWebImage
   - SnapshotTesting (~> 1.8.1)
 
 SPEC REPOS:
@@ -159,6 +163,7 @@ SPEC REPOS:
     - Nimble
     - PromiseKit
     - PromisesObjC
+    - SDWebImage
     - SnapshotTesting
 
 SPEC CHECKSUMS:
@@ -179,8 +184,9 @@ SPEC CHECKSUMS:
   Nimble: e7e615c0335ee4bf5b0d786685451e62746117d5
   PromiseKit: c06835ba442ce5454ce3cdde470232804a6e4ff8
   PromisesObjC: 68159ce6952d93e17b2dfe273b8c40907db5ba58
+  SDWebImage: 4dc3e42d9ec0c1028b960a33ac6b637bb432207b
   SnapshotTesting: 38947050d13960d57a4a9c166fcf51bca7d56970
 
-PODFILE CHECKSUM: b4a6cb42c8979be970b12faac5f338ec641f495d
+PODFILE CHECKSUM: 0efd7ddd26ab0dd4ed5243bbf5de60c412d284aa
 
 COCOAPODS: 1.11.2

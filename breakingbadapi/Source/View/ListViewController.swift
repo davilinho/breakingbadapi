@@ -46,9 +46,9 @@ extension ListViewController: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "charactersCell", for: indexPath)
-        let character = self.characters?[indexPath.row]
-        cell.textLabel?.text = character?.name
+        guard let cell: CharactersCell = tableView.dequeueReusableCell(withIdentifier: "charactersCell", for: indexPath) as? CharactersCell,
+              let character = self.characters?[indexPath.row] else { return UITableViewCell() }
+        cell(self.view.frame.height, character)
         return cell
     }
 }
