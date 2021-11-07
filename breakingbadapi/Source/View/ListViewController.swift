@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ListViewController: UIViewController {
+class ListViewController: BaseViewController {
     @IBOutlet private var tableView: UITableView!
 
     @Inject var viewModel: ListViewModel
@@ -20,18 +20,23 @@ class ListViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.bindViewModel()
         self.bindData()
-    }
-
-    private func bindViewModel() {
-        self.viewModel.characters.bind { [weak self] response in
-            self?.characters = response
-        }
     }
 
     private func bindData() {
         self.viewModel.onViewDidLoad()
+    }
+
+    override func bindViewModels() {
+        super.bindViewModels()
+        self.viewModel.characters.subscribe { [weak self] response in
+            self?.characters = response
+        }
+    }
+
+    override func unBindViewModels() {
+        super.unBindViewModels()
+        self.viewModel.characters.unsubscribe()
     }
 }
 

@@ -8,17 +8,25 @@
 import Foundation
 
 @propertyWrapper
-struct StorageDatasource<T> {
+struct StorageDatasource<T: Codable> {
     private let key: String
-    private let defaultValue: T
 
-    init(_ key: String, defaultValue: T) {
-        self.key = key
-        self.defaultValue = defaultValue
+    public init() {
+        self.key = String(describing: T.self)
     }
 
-    var wrappedValue: T {
-        get { return UserDefaults.standard.object(forKey: key) as? T ?? defaultValue }
-        set { UserDefaults.standard.set(newValue, forKey: key) }
+    public var wrappedValue: T? {
+        get {
+            guard let data = UserDefaults.standard.object(forKey: key) as? Data,
+                let value = try? JSONDecoder().decode(T.self, from: data) else { return nil }
+            return value
+        }
+        set {
+            guard let newValue = newValue, let value = try? JSONEncoder().encode(newValue) else {
+                UserDefaults.standard.removeObject(forKey: self.key)
+                return
+            }
+            UserDefaults.standard.set(value, forKey: self.key)
+        }
     }
 }
