@@ -5,25 +5,41 @@
 //  Created by David Martin on 3/12/20.
 //
 
+import Lottie
 import UIKit
 
 class ListViewController: BaseViewController {
     @IBOutlet private var tableView: UITableView!
 
+    @IBOutlet private var animationView: AnimationView! {
+        didSet {
+            self.animationView.contentMode = .scaleAspectFit
+            self.animationView.loopMode = .loop
+            self.animationView.backgroundBehavior = .pauseAndRestore
+        }
+    }
+
     @Inject var viewModel: ListViewModel
 
     private var characters: [Character]? {
         didSet {
+            self.viewModel.stopAnimation()
             self.tableView.reloadData()
         }
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.initLottieAnimation()
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         self.bindData()
     }
 
     private func bindData() {
+        self.viewModel.startAnimation()
         self.viewModel.onViewDidLoad()
     }
 
@@ -32,11 +48,19 @@ class ListViewController: BaseViewController {
         self.viewModel.characters.subscribe { [weak self] response in
             self?.characters = response
         }
+        self.viewModel.isAnimated.subscribe { [weak self] isAnimated in
+            guard let isAnimated = isAnimated, isAnimated else {
+                self?.stopAnimation()
+                return
+            }
+            self?.playAnimation()
+        }
     }
 
     override func unBindViewModels() {
         super.unBindViewModels()
         self.viewModel.characters.unsubscribe()
+        self.viewModel.isAnimated.unsubscribe()
     }
 }
 
@@ -53,6 +77,20 @@ extension ListViewController: UITableViewDataSource {
     }
 }
 
-extension ListViewController: UITabBarDelegate {
+// MARK: - Lottie animations
 
+extension ListViewController {
+    private func initLottieAnimation() {
+        let animation = Animation.named("loading")
+        self.animationView.animation = animation
+    }
+
+    private func playAnimation() {
+        self.animationView.play()
+    }
+
+    private func stopAnimation() {
+        self.animationView.stop()
+        self.animationView.isHidden = true
+    }
 }
