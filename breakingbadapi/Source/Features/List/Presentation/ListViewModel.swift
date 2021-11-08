@@ -19,6 +19,12 @@ class ListViewModel: InjectableComponent & BaseViewModel {
         }
     }
 
+    func search(by name: String) {
+        self.useCase.fetchCharacters(by: name) { [weak self] in
+            self?.characters.value = $0
+        }
+    }
+
     func startAnimation() {
         self.isAnimated.value = true
     }

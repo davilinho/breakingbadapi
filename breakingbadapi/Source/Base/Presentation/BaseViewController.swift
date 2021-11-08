@@ -8,6 +8,10 @@
 import UIKit
 
 open class BaseViewController: UIViewController {
+    open override func viewDidLoad() {
+        super.viewDidLoad()
+        self.setupNavigationBar()
+    }
     open override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.bindViewModels()
@@ -24,5 +28,14 @@ open class BaseViewController: UIViewController {
 
     func unBindViewModels() {
         CoreLog.ui.debug("Unbinding view models")
+    }
+}
+
+// MARK: - Private functions
+
+extension BaseViewController {
+    private func setupNavigationBar() {
+        let settings: NavigationBarSettings = NavigationBarSettings()
+        self.navigationController?.navigationBar.set(settings: settings)
     }
 }

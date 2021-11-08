@@ -8,17 +8,21 @@
 import Foundation
 
 struct Character: Codable, Equatable {
-    let chatId: Int?
-    let name: String?
-    let birthday: String?
-    let occupation: [String]?
-    let img: String?
-    let status: Status?
-    let nickName: String?
-    let appearance: [Int]?
-    let portrayed: String?
-    let category: String?
-    let betterCallSaulAppearance: [Int]?
+    var chatId: Int? = nil
+    var name: String? = nil
+    var birthday: String? = nil
+    var occupation: [String]? = nil
+    var img: String? = nil
+    var status: Status? = nil
+    var nickName: String? = nil
+    var appearance: [Int]? = nil
+    var portrayed: String? = nil
+    var category: String? = nil
+    var betterCallSaulAppearance: [Int]? = nil
+
+    init(name: String?) {
+        self.name = name
+    }
 
     public enum CodingKeys: String, CodingKey {
         case chatId = "chat_id"

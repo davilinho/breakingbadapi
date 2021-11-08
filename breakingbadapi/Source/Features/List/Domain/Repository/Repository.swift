@@ -8,8 +8,8 @@
 class Repository: InjectableComponent {
     @Inject private var remote: RemoteDatasource
 
-    func fetchCharacters(completion:  @escaping ([Character]) -> Void) {
-        self.remote.get(to: "characters", with: "") { (result: Result<[Character], BaseError>) in
+    func fetchCharacters(by name: String? = nil, completion:  @escaping ([Character]) -> Void) {
+        self.remote.get(to: "characters", with: Character(name: name)) { (result: Result<[Character], BaseError>) in
             switch result {
             case .success(let response):
                 CoreLog.business.info("%@", response)

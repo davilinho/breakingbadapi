@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="iIU-tQ-Bx7">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -88,33 +88,62 @@
                                 </connections>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gHy-OO-hg5" customClass="AnimationView" customModule="Lottie">
-                                <rect key="frame" x="179" y="425" width="56" height="56"/>
+                                <rect key="frame" x="179" y="447" width="56" height="56"/>
                                 <color key="backgroundColor" white="0.59999999999999998" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="56" id="59l-I9-DgW"/>
                                     <constraint firstAttribute="width" secondItem="gHy-OO-hg5" secondAttribute="height" id="EQD-1G-orv"/>
                                 </constraints>
                             </view>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TnR-xY-0ih">
+                                <rect key="frame" x="52" y="208" width="310.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.69999999999999996" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="gHy-OO-hg5" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="00e-bm-n7R"/>
+                            <constraint firstItem="TnR-xY-0ih" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="120" id="39o-Kh-vXe"/>
                             <constraint firstAttribute="trailing" secondItem="TYc-Pr-duH" secondAttribute="trailing" id="K4k-dl-7kh"/>
+                            <constraint firstItem="TnR-xY-0ih" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="XBj-dd-uTF"/>
+                            <constraint firstItem="TnR-xY-0ih" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.75" id="kQg-Sk-bnj"/>
                             <constraint firstItem="TYc-Pr-duH" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="nAw-LV-NLc"/>
                             <constraint firstItem="gHy-OO-hg5" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="sjZ-Z1-OdE"/>
                             <constraint firstItem="TYc-Pr-duH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="tRp-YQ-oDG"/>
                             <constraint firstAttribute="bottom" secondItem="TYc-Pr-duH" secondAttribute="bottom" id="wSh-pw-S7H"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="VHM-tL-HgU"/>
                     <connections>
                         <outlet property="animationView" destination="gHy-OO-hg5" id="J8r-TI-fuB"/>
+                        <outlet property="notFoundResultsLabel" destination="TnR-xY-0ih" id="DU5-Ri-Lwj"/>
                         <outlet property="tableView" destination="TYc-Pr-duH" id="G2q-7k-6HP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-870" y="92"/>
+            <point key="canvasLocation" x="39.130434782608695" y="91.741071428571431"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="FgI-tb-zQn">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="iIU-tQ-Bx7" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="MaW-g4-0hx">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="QrK-ut-PPD"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zgg-ip-0ft" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-871.01449275362324" y="91.741071428571431"/>
         </scene>
     </scenes>
     <resources>

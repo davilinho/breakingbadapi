@@ -19,7 +19,7 @@ class RemoteDatasource: InjectableComponent {
 }
 
 extension RemoteDatasource {
-    func get<Response: Codable>(to endpoint: String, with params: String?, completion: @escaping (Result<Response, BaseError>) -> Void) {
+    func get<Response: Codable>(to endpoint: String, with params: Codable?, completion: @escaping (Result<Response, BaseError>) -> Void) {
         let url: String = [self.baseUrl, endpoint].compactMap { $0 }.joined(separator: "/")
         let request = params?.dictionary
 
@@ -28,7 +28,7 @@ extension RemoteDatasource {
         self.sessionManager
             .request(url, method: .get,
                      parameters: request,
-                     encoding: JSONEncoding.default,
+                     encoding: URLEncoding.default,
                      headers: ["Accept": "application/json",
                                "Content-Type": "application/json"])
             .validate(contentType: ["application/json"])

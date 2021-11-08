@@ -10,9 +10,9 @@ import Foundation
 class UseCase: InjectableComponent {
     @Inject private var repository: Repository
 
-    func fetchCharacters(completion: @escaping ([Character]) -> Void) {
+    func fetchCharacters(by name: String? = nil, completion: @escaping ([Character]) -> Void) {
         DispatchQueue.global(qos: .background).async {
-            self.repository.fetchCharacters { response in
+            self.repository.fetchCharacters(by: name) { response in
                 DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1)) {
                     completion(response)
                 }
