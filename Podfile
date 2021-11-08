@@ -11,6 +11,7 @@ target 'breakingbadapi' do
   pod 'Firebase/Performance'
   pod "PromiseKit", "6.12.0"
   pod 'SDWebImage'
+  pod 'lottie-ios'
 
   target 'breakingbadapiTests' do
     inherit! :search_paths
