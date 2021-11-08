@@ -13,6 +13,7 @@ class ListViewController: BaseViewController {
 
     @IBOutlet private var animationView: AnimationView! {
         didSet {
+            self.animationView.layer.cornerRadius = 8
             self.animationView.contentMode = .scaleAspectFit
             self.animationView.loopMode = .loop
             self.animationView.backgroundBehavior = .pauseAndRestore
@@ -24,6 +25,7 @@ class ListViewController: BaseViewController {
     private var characters: [Character]? {
         didSet {
             self.viewModel.stopAnimation()
+            self.tableView.refreshControl?.endRefreshing()
             self.tableView.reloadData()
         }
     }
@@ -31,16 +33,12 @@ class ListViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.initLottieAnimation()
+        self.initRefreshControl()
     }
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        self.bindData()
-    }
-
-    private func bindData() {
-        self.viewModel.startAnimation()
-        self.viewModel.onViewDidLoad()
+        self.fetch()
     }
 
     override func bindViewModels() {
@@ -61,6 +59,11 @@ class ListViewController: BaseViewController {
         super.unBindViewModels()
         self.viewModel.characters.unsubscribe()
         self.viewModel.isAnimated.unsubscribe()
+    }
+
+    @objc private func fetch() {
+        self.viewModel.startAnimation()
+        self.viewModel.onViewDidLoad()
     }
 }
 
@@ -87,10 +90,21 @@ extension ListViewController {
 
     private func playAnimation() {
         self.animationView.play()
+        self.animationView.isHidden = false
     }
 
     private func stopAnimation() {
         self.animationView.stop()
         self.animationView.isHidden = true
+    }
+}
+
+// MARK: - Refresh control
+
+extension ListViewController {
+    private func initRefreshControl() {
+        self.tableView.refreshControl = UIRefreshControl()
+        self.tableView.refreshControl?.tintColor = .clear
+        self.tableView.refreshControl?.addTarget(self, action: #selector(self.fetch), for: .valueChanged)
     }
 }

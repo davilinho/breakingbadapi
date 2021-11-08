@@ -13,7 +13,7 @@ class UseCase: InjectableComponent {
     func fetchCharacters(completion: @escaping ([Character]) -> Void) {
         DispatchQueue.global(qos: .background).async {
             self.repository.fetchCharacters { response in
-                DispatchQueue.main.async {
+                DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1)) {
                     completion(response)
                 }
             }
