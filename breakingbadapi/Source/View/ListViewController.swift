@@ -50,11 +50,10 @@ class ListViewController: BaseViewController {
         }
         self.viewModel.isAnimated.subscribe { [weak self] isAnimated in
             guard let isAnimated = isAnimated, isAnimated else {
-                self?.animationView.stop()
-                self?.animationView.isHidden = true
+                self?.stopAnimation()
                 return
             }
-            self?.animationView.play()
+            self?.playAnimation()
         }
     }
 
@@ -62,11 +61,6 @@ class ListViewController: BaseViewController {
         super.unBindViewModels()
         self.viewModel.characters.unsubscribe()
         self.viewModel.isAnimated.unsubscribe()
-    }
-
-    private func initLottieAnimation() {
-        let animation = Animation.named("loading")
-        self.animationView.animation = animation
     }
 }
 
@@ -80,5 +74,23 @@ extension ListViewController: UITableViewDataSource {
               let character = self.characters?[indexPath.row] else { return UITableViewCell() }
         cell(self.view.frame.height, character)
         return cell
+    }
+}
+
+// MARK: - Lottie animations
+
+extension ListViewController {
+    private func initLottieAnimation() {
+        let animation = Animation.named("loading")
+        self.animationView.animation = animation
+    }
+
+    private func playAnimation() {
+        self.animationView.play()
+    }
+
+    private func stopAnimation() {
+        self.animationView.stop()
+        self.animationView.isHidden = true
     }
 }
