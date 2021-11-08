@@ -13,6 +13,7 @@ class UseCase: InjectableComponent {
     func fetchCharacters(by name: String? = nil, completion: @escaping ([Character]) -> Void) {
         DispatchQueue.global(qos: .background).async {
             self.repository.fetchCharacters(by: name) { response in
+                /* I've added a second delay, to let see the loading animation as well */
                 DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1)) {
                     completion(response)
                 }

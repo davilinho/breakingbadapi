@@ -34,9 +34,9 @@ class ListViewController: BaseViewController {
 
     private var characters: [Character]? {
         didSet {
-            self.viewModel.stopAnimation()
-            self.tableView.refreshControl?.endRefreshing()
-            self.tableView.reloadData()
+            self.refreshTableView()
+            self.stopAnimation()
+            self.setSearchControllerIntoNavigation()
         }
     }
 
@@ -56,38 +56,33 @@ class ListViewController: BaseViewController {
     override func bindViewModels() {
         super.bindViewModels()
         self.viewModel.characters.subscribe { [weak self] response in
-            self?.characters = response
-        }
-        self.viewModel.isAnimated.subscribe { [weak self] isAnimated in
-            guard let isAnimated = isAnimated, isAnimated else {
-                self?.stopAnimation()
-                return
+            guard let self = self, let models = response else { return }
+            self.characters = models
+
+            let hasResults = !models.isEmpty
+            if hasResults {
+                self.hideNotFoundResultsLabel()
+            } else {
+                self.showNotFoundResultsLabel(for: self.search.searchBar.text)
             }
-            self?.playAnimation()
         }
     }
 
     override func unBindViewModels() {
         super.unBindViewModels()
         self.viewModel.characters.unsubscribe()
-        self.viewModel.isAnimated.unsubscribe()
     }
 
     @objc private func fetch() {
         guard !self.isSearched() else { return }
-        self.viewModel.startAnimation()
+        self.playAnimation()
         self.viewModel.onViewDidLoad()
     }
 }
 
 extension ListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        guard let count = self.characters?.count, count > 0 else {
-            self.showNotFoundResultsLabel(for: self.search.searchBar.text)
-            return 0
-        }
-        self.hideNotFoundResultsLabel()
-        return count
+        return self.characters?.count ?? 0
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -107,10 +102,21 @@ extension ListViewController: UITableViewDataSource {
     private func hideNotFoundResultsLabel() {
         self.notFoundResultsLabel.isHidden = true
     }
+
+    private func refreshTableView() {
+        self.tableView.refreshControl?.endRefreshing()
+        self.tableView.reloadData()
+    }
+
+    private func setSearchControllerIntoNavigation() {
+        self.navigationItem.searchController = self.search
+    }
 }
 
 extension ListViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 
+    }
 }
 
 // MARK: - UI
@@ -156,7 +162,6 @@ extension ListViewController: UISearchBarDelegate {
         self.search.searchBar.delegate = self
         self.search.searchBar.placeholder = "Search"
         self.search.obscuresBackgroundDuringPresentation = false
-        self.navigationItem.searchController = self.search
         self.navigationItem.hidesSearchBarWhenScrolling = true
         self.definesPresentationContext = true
 
@@ -198,16 +203,6 @@ extension ListViewController: UISearchBarDelegate {
 
     private func search(by text: String) {
         self.viewModel.search(by: text)
-    }
-
-    private func showEmptySearchView() {
-//        guard let textSearch = self.search.searchBar.text, let viewController = MediQuo.getInboxListEmptyViewController(textSearch) else { return }
-//        self.add(asChildViewController: viewController,
-//                 with: CGRect(x: 0, y: 100, width: self.view.frame.size.width, height: self.view.frame.size.height))
-    }
-
-    private func hideEmptySearchView() {
-//        self.removeChild()
     }
 
     private func isSearched() -> Bool {

@@ -11,25 +11,22 @@ class ListViewModel: InjectableComponent & BaseViewModel {
     @Inject private var useCase: UseCase
 
     var characters = Observable<[Character]>()
-    var isAnimated = Observable<Bool>()
 
     func onViewDidLoad() {
         self.useCase.fetchCharacters { [weak self] in
-            self?.characters.value = $0
+            guard let self = self else { return }
+            self.update(models: $0)
         }
     }
 
     func search(by name: String) {
         self.useCase.fetchCharacters(by: name) { [weak self] in
-            self?.characters.value = $0
+            guard let self = self else { return }
+            self.update(models: $0)
         }
     }
 
-    func startAnimation() {
-        self.isAnimated.value = true
-    }
-
-    func stopAnimation() {
-        self.isAnimated.value = false
+    private func update(models: [Character]) {
+        self.characters.value = models
     }
 }
