@@ -89,7 +89,7 @@
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gHy-OO-hg5" customClass="AnimationView" customModule="Lottie">
                                 <rect key="frame" x="179" y="425" width="56" height="56"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="0.59999999999999998" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="56" id="59l-I9-DgW"/>
                                     <constraint firstAttribute="width" secondItem="gHy-OO-hg5" secondAttribute="height" id="EQD-1G-orv"/>
