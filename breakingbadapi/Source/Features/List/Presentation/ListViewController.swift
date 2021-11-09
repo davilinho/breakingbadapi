@@ -202,6 +202,7 @@ extension ListViewController: UISearchBarDelegate {
     }
 
     private func search(by text: String) {
+        self.playAnimation()
         self.viewModel.search(by: text)
     }
 

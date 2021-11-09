@@ -75,6 +75,7 @@
                                                 <constraint firstItem="mFm-Vx-mKC" firstAttribute="width" secondItem="8mV-X9-ldp" secondAttribute="width" id="Noc-Fp-7CT"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
                                             <outlet property="avatarImage" destination="hjI-Vw-2Uc" id="Epf-TN-gxW"/>
                                             <outlet property="nameLabel" destination="WVf-Sa-RzJ" id="BSd-O2-mdP"/>
